@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="599ce491-a83c-4fcb-be14-ec9f13e6b949" Name="Mitigation v2" Enabled="true">
+  <ExportedFolder Id="599ce491-a83c-4fcb-be14-ec9f13e6b949" Name="AliceXIV Mitigation" Enabled="true">
     <Folders>
       <Folder Id="d3b06e02-afae-42f7-aed3-3f1486f24151" Name="Skills" Enabled="true">
         <Folders>
