@@ -1,0 +1,1300 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="599ce491-a83c-4fcb-be14-ec9f13e6b949" Name="Mitigation v2" Enabled="true">
+    <Folders>
+      <Folder Id="d3b06e02-afae-42f7-aed3-3f1486f24151" Name="Skills" Enabled="true">
+        <Folders>
+          <Folder FFXIVJobFilter="4437573632" Id="953b3897-f135-448d-afd0-a6781a5cc812" Name="Tank CDs" Enabled="true">
+            <Folders>
+              <Folder Id="44b8fa25-b11a-4c5a-b10a-e83297d81bbf" Name="Invuls" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="Hallowed Ground" Id="21cba664-912b-451a-917c-ad4c4c9eeee8" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):[A-Z0-9]+:(Hallowed Ground):[A-Z0-9]+:[\w\s']+:">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:10:420:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Name="Holmgang" Id="feb98cfa-d2c9-4404-be76-39a74730ac51" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):[A-Z0-9]+:(Holmgang):[A-Z0-9]+:[\w\s']+:">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:8:240:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Name="Living Dead" Id="49db2f85-d468-4b66-9109-925d978e7ba7" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):[A-Z0-9]+:(Living Dead):[A-Z0-9]+:[\w\s']+:">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:10:300:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Trigger>
+                  <Trigger Enabled="true" Name="Superbolide" Id="4eeeb378-a54b-4ad0-a1e3-5f4f51755180" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):[A-Z0-9]+:(Superbolide):[A-Z0-9]+:[\w\s']+:">
+                    <Actions>
+                      <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="true" Grouping="And">
+                          <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:8:360:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                        </Condition>
+                      </Action>
+                      <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                    </Condition>
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Name="Passage Of Arms" Id="8d423e8b-63f6-4336-badb-1e1ee5c33fa4" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):1CD9:(Passage Of Arms):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:5:120:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Dark Mind" Id="45b7f671-103f-409c-a240-7331c949a3dc" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):[A-Z0-9]+:(Dark Mind):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:10:60:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Nebula | Sentinel | Shadow Wall | Vengeance" Id="ae849aac-5fd2-4a05-886d-6f6eb7e62778" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):(?:3F14|11|E34|2C):(Nebula|Sentinel|Shadow Wall|Vengeance):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:15:120:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Rampart" Id="9d90b3d9-dfbf-4e8d-abf9-9e029ad0b0ce" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):1D6B:(Rampart):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:20:90:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="b47c99fe-d543-4d46-98e2-fd13217676a8" Name="Targeted" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="Addle" Id="059d2123-cc03-48be-8bba-53455c9c2dc6" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):1D88:(Addle):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:10:90:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Feint" Id="99cfc7f3-511e-4f5a-9e91-be2db40958f6" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):1D7D:(Feint):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:10:90:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="6efd489f-e4aa-4de5-ae0f-be181ff1c2b5" Name="Untargeted" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="Reprisal" Id="7852990e-a087-4575-8fb3-429feee2f800" RegularExpression="00:102b:([\w\s']+) uses Reprisal">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:${_ffxivparty[$1].id}:Reprisal:10:90:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$1" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:Reprisal" TriggerForce="active" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Shield Samba | Troubadour | Tactician" Id="572e058c-1409-4060-9da7-732dc718d691" RegularExpression="00:[0-9A-z]{4}:([\w\s']+) uses (Shield Samba|Troubadour|Tactician).">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:${_ffxivparty[$1].id}:$2:15:120:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Dark Missionary | Divine Veil | Heart of Light | Shake It Off" Id="b39fafc0-7ca6-4dd6-bcf7-10f80267ce5a" RegularExpression="00:102b:([\w\s']+) uses (Dark Missionary|Divine Veil|Heart of Light|Shake It Off)">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:${_ffxivparty[$1].id}:$2:15:90:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$2" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$1" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Swiftcast" Id="c69195b1-bb5f-4203-a643-c6e44817c9e4" RegularExpression="15:([A-Z0-9]{8}):([\w\s']+):1D89:(Swiftcast):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:5:60:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVJobFilter="4437573632" Id="ffe9842f-53c2-434b-9c74-e936aa1fa2c0" Name="Healing CDs" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="Excogitation" Id="317286e8-cc50-4481-b870-3d729c219353" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):1D0A:(Excogitation):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:21:60:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Temperance | Seraph | Fey Illumination | Neutral Sect" Id="5f77e8c1-c989-4a27-880f-e80b555a7b79" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):(?:4098|40A1|409A|40AF):(Temperance|Summon Seraph|Fey Illumination|Neutral Sect):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:20:120:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="false" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Asylum" Id="a4ab458e-26e7-44a7-97d4-00e1a244fc0e" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):DF1:(Asylum):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:24:90:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Deployment Tactics" Id="311a25ce-9e49-45ed-a80f-56539adc2306" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):E01:(Deployment Tactics):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:2:120:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Fey Blessing | Whispering Dawn" Id="720a6f81-8a1f-45d2-8124-04544c1c2604" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):(?:409F|4099):(Fey Blessing|Whispering Dawn):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:21:60:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Horoscope" Id="696e10fd-5a58-4522-ada1-66256f7c7f66" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):40AD:(Horoscope):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:10:60:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Assize" Id="330ab2b7-4094-4b73-b751-a6007332b705" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):DF3:(Assize):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:2:45:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Divine Benison | Celestial Intersection" Id="61d4f075-0b29-44d2-9508-6b4f6fbefbc3" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):(?:1D08|40AC):(Divine Benison|Celestial Intersection):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:2:30:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Plenary Indulgence | Earthly Star" Id="8487c0b2-9a24-41f1-b548-7e612e4c0e68" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):(?:1D09|1D0F):(Plenary Indulgence|Earthly Star):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:10:60:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Benediction" Id="96122283-e6e2-4b03-97f3-771c0d612f69" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):8C:(Benediction):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:2:180:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Tetragrammaton" Id="e03d2a17-88fa-4ecf-ae64-37ab65a681a0" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):DF2:(Tetragrammaton):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:2:60:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Sacred Soil" Id="9649799a-189e-4eb3-94f8-510b85f26452" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):BC:(Sacred Soil):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:15:30:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" Enabled="False" ActionType="Trigger" ExecutionDelayExpression="1000">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Collective Unconscious" Id="5622ae4f-869f-4c8d-a0b8-8480481341b5" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):E1D:(Collective Unconscious):">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:15:60:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="Indomitability" Id="ae063a83-cc1e-4a91-a0a0-77a4f83088da" RegularExpression="1[56]:([A-Z0-9]{8}):([\w\s']+):DFF:(Indomitability):" PeriodRefire="Deny" RefirePeriodExpression="1000">
+                <Actions>
+                  <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" TriggerForce="regexp" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:${_ffxivparty[$1].order}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" TriggerText="MitiAura:$1:$3:2:30:${_ffxivparty[$1].order}:${tvar:alicemInUse[${_ffxivparty[$1].order}][11]}" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="b351a328-1e4d-4442-85de-946a52107eed" TriggerText="call:$2" TriggerForce="active" Enabled="False" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="c098190e-23e7-4a55-bbc7-321eda1cca4d" TriggerText="call:$3" TriggerForce="active" ActionType="Trigger">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${_ffxivplayer}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[1].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[6].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[3].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[5].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[4].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[7].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[8].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[2].name}" ExpressionTypeL="String" ExpressionR="$2" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+                </Condition>
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+      <Folder Id="6d4dcc47-3ca7-4a43-b865-e6c8cf4ff35e" Name="Init" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="Mitigation Init" Id="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" RegularExpression="Engage!" Description="Contains Offset settings">
+            <Actions>
+              <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="alicemInit" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="alicemX" VariableExpression="300" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="alicemY" VariableExpression="49" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="alicemOffsetX" VariableExpression="34" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="alicemOffsetY" VariableExpression="32" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="alicemPadY" VariableExpression="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="alicemPadX" VariableExpression="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="alicemPath" VariableExpression="E:\Users\D9\Documents\stuff\Triggernometry\Mitigation\" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" VariableOp="SetString" VariableName="alicemPathName" VariableExpression="E:\Users\D9\Documents\stuff\Triggernometry\Mitigation\Sounds\Names\Allison\Softer\" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" VariableOp="SetString" VariableName="alicemPathSkill" VariableExpression="E:\Users\D9\Documents\stuff\Triggernometry\Mitigation\Sounds\" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="2" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="3" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="4" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="15" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="5" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="16" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="6" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="17" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="7" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="18" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="8" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Mitigation Reset" Id="7c771d79-2495-4f40-a88c-9ab5098a5846" RegularExpression="21:(.*):40000010">
+            <Actions>
+              <Action OrderNumber="1" TableVariableName="alicemInUse" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableName="alicemInit" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="alicemAura_*" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" AuraOp="DeactivateAuraRegex" AuraName="alicemAura_*" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="8.25" TextAuraName="alicemAura_*" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="CancelTrigger" TriggerId="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="Mitigation Init - Backup" Id="adcb6e42-46b7-46b9-a3bf-f28954a76e3b" RegularExpression="24:Limit Break: 0000" Description="Provides a secondary way to initialize if countdown is not used.">
+            <Actions>
+              <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="1d3146d2-0c27-433a-a6ce-b94faf7c0e27" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${var:alicemInit}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="729ed0d4-3a90-4442-a933-c0901b3528db" Name="Calls" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="false" Name="Call Name [Private] [Keep Disabled]" Id="b351a328-1e4d-4442-85de-946a52107eed" RegularExpression="call:([\w\']+)">
+            <Actions>
+              <Action OrderNumber="1" PlaySpeechMyself="True" UseTTSTextExpression="$1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" PlaySoundFileExpression="${var:alicemPathName}$1.mp3" PlaySoundMyself="True" UseTTSTextExpression="Complex" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="Call Name [Public] [Keep Disabled]" Id="414121e1-801a-4bfb-bf97-fce6fea48f36" RegularExpression="call:([\w\']+)">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="$1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" PlaySoundFileExpression="${var:alicemPathName}$1.mp3" UseTTSTextExpression="Complex" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="Call Skill [Public] [Keep Disabled]" Id="1a1f88ef-5cb7-4c4d-b4af-bf6b7c2ce4f8" RegularExpression="call:([\w\s\']+)">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="$1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Rampart|Nebula|Sentinel|Shadow Wall|Vengeance|Hallowed Ground|Holmgang|Living Dead|Superbolide|Dark Mind|Passage Of Arms|Shield Samba|Troubadour|Tactician|Reprisal|Divine Veil|Heart of Light|Dark Missionary|Shake It Off|Assize|Asylum|Benediction|Deployment Tactics|Divine Benison|Excogitation|Fey Blessing|Whispering Dawn|Indomitability|Plenary Indulgence|Sacred Soil|Temperance|Summon Seraph|Fey Illumination|Tetragrammaton|Earthly Star|Collective Unconscious|Celestial Intersection|Neutral Sect|Horoscope)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" PlaySoundFileExpression="${var:alicemPathSkill}$1.mp3" UseTTSTextExpression="Complex" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Rampart|Nebula|Sentinel|Shadow Wall|Vengeance|Hallowed Ground|Holmgang|Living Dead|Superbolide|Dark Mind|Passage Of Arms|Shield Samba|Troubadour|Tactician|Reprisal|Divine Veil|Heart of Light|Dark Missionary|Shake It Off|Assize|Asylum|Benediction|Deployment Tactics|Divine Benison|Excogitation|Fey Blessing|Whispering Dawn|Indomitability|Plenary Indulgence|Sacred Soil|Temperance|Summon Seraph|Fey Illumination|Tetragrammaton|Earthly Star|Collective Unconscious|Celestial Intersection|Neutral Sect|Horoscope)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="false" Name="Call Skill [Private] [Keep Disabled]" Id="c098190e-23e7-4a55-bbc7-321eda1cca4d" RegularExpression="call:([\w\s\']+)">
+            <Actions>
+              <Action OrderNumber="1" PlaySpeechMyself="True" UseTTSTextExpression="$1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Rampart|Nebula|Sentinel|Shadow Wall|Vengeance|Hallowed Ground|Holmgang|Living Dead|Superbolide|Dark Mind|Passage Of Arms|Shield Samba|Troubadour|Tactician|Reprisal|Divine Veil|Heart of Light|Dark Missionary|Shake It Off|Assize|Asylum|Benediction|Deployment Tactics|Divine Benison|Excogitation|Fey Blessing|Whispering Dawn|Indomitability|Plenary Indulgence|Sacred Soil|Temperance|Summon Seraph|Fey Illumination|Tetragrammaton|Earthly Star|Collective Unconscious|Celestial Intersection|Neutral Sect|Horoscope)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" PlaySoundFileExpression="${var:alicemPathSkill}$1.mp3" PlaySoundMyself="True" UseTTSTextExpression="Complex" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Rampart|Nebula|Sentinel|Shadow Wall|Vengeance|Hallowed Ground|Holmgang|Living Dead|Superbolide|Dark Mind|Passage Of Arms|Shield Samba|Troubadour|Tactician|Reprisal|Divine Veil|Heart of Light|Dark Missionary|Shake It Off|Assize|Asylum|Benediction|Deployment Tactics|Divine Benison|Excogitation|Fey Blessing|Whispering Dawn|Indomitability|Plenary Indulgence|Sacred Soil|Temperance|Summon Seraph|Fey Illumination|Tetragrammaton|Earthly Star|Collective Unconscious|Celestial Intersection|Neutral Sect|Horoscope)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="false" Name="Mitigation - Aura [Keep Disabled]" Id="3c0b9776-d3ea-4d3f-a2c0-56ffc092c2cd" RegularExpression="MitiAura:([A-Z0-9]+):([\w\s]+):([\w]+):([\w]+):([\w]+):([\w]+)" Description="Key:&#xD;&#xA;$1 - Caster ID - Used for Party Order &amp; Name&#xD;&#xA;$2 - Ability Name - Used for Icons and Sounds&#xD;&#xA;$3 - Duration - Used to determine active/inactive&#xD;&#xA;$4 - Cooldown - Used to determine when to remove&#xD;&#xA;$5 - Player Order - Used to determine Table Lookup &amp; Y Positioning&#xD;&#xA;$6 - Table Order - Used to determine Table Lookup &amp; X Positioning">
+        <Actions>
+          <Action OrderNumber="1" LogMessageText="Aura: $1 | $2 | $3 | $4 | $5 | $6 | ${numeric:$3*1000} | ${numeric:($4-$3)*1000}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" LogMessageText="Y Offset: ${numeric:${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" LogMessageText="X Offset: ${numeric:${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" LogMessageText="${var:alicemPath}\$2.png" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" AuraImageMode="StretchImage" AuraName="alicemAura_$5_$6" AuraImage="${var:alicemPath}$2.png" AuraXIniExpression="${numeric:${var:alicemPadX}+${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" AuraYIniExpression="${numeric:${var:alicemPadY}+${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" AuraWIniExpression="24" AuraHIniExpression="24" AuraOIniExpression="100" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="6" AuraImageMode="StretchImage" AuraName="alicemAura_$5_$6" AuraImage="${var:alicemPath}$2.png" AuraXIniExpression="${numeric:${var:alicemPadX}+${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" AuraYIniExpression="${numeric:${var:alicemPadY}+${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" AuraWIniExpression="32" AuraHIniExpression="32" AuraOIniExpression="100" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraForeground="#FFFF80" TextAuraOutline="Black" TextAuraName="alicemAura_$5_$6" TextAuraExpression="${numeric:$4-${_since}}" TextAuraXIniExpression="${numeric:${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" TextAuraYIniExpression="${numeric:${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" TextAuraWIniExpression="32" TextAuraHIniExpression="32" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="Lucida Sans Unicode" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="7" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="$5" TableVariableY="$6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="8" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:$5" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="9" AuraImageMode="StretchImage" AuraName="alicemAura_$5_$6" AuraImage="${var:alicemPath}$2.png" AuraXIniExpression="${numeric:${var:alicemPadX}+${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" AuraYIniExpression="${numeric:${var:alicemPadY}+${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" AuraWIniExpression="24" AuraHIniExpression="24" AuraOIniExpression="80" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="${numeric:$3*1000}">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="10" AuraImageMode="StretchImage" AuraName="alicemAura_$5_$6" AuraImage="${var:alicemPath}$2.png" AuraXIniExpression="${numeric:${var:alicemPadX}+${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" AuraYIniExpression="${numeric:${var:alicemPadY}+${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" AuraWIniExpression="32" AuraHIniExpression="32" AuraOIniExpression="100" TextAuraAlignment="BottomLeft" TextAuraEffect="Bold" TextAuraFontSize="8.25" TextAuraForeground="White" TextAuraOutline="Black" TextAuraName="alicemAura_$5_$6" TextAuraExpression="${numeric:$4-${_since}}" TextAuraXIniExpression="${numeric:${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" TextAuraYIniExpression="${numeric:${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" TextAuraWIniExpression="32" TextAuraHIniExpression="32" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="Lucida Sans Unicode" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="11" AuraOp="DeactivateAura" AuraImageMode="StretchImage" AuraName="alicemAura_$5_$6" AuraImage="${var:alicemPath}$2.png" AuraXIniExpression="${numeric:${var:alicemPadX}+${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" AuraYIniExpression="${numeric:${var:alicemPadY}+${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" AuraWIniExpression="32" AuraHIniExpression="32" AuraOIniExpression="0" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Aura" ExecutionDelayExpression="${numeric:($4-$3)*1000}">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="12" AuraOp="DeactivateAura" AuraImageMode="StretchImage" AuraName="alicemAura_$5_$6" AuraImage="${var:alicemPath}$2.png" AuraXIniExpression="${numeric:${var:alicemPadX}+${var:alicemX}-${var:alicemOffsetX}+($6*${var:alicemOffsetX})}" AuraYIniExpression="${numeric:${var:alicemPadY}+${var:alicemY}-${var:alicemOffsetY}+($5*${var:alicemOffsetY})}" AuraWIniExpression="32" AuraHIniExpression="32" AuraOIniExpression="0" TextAuraOp="DeactivateAura" TextAuraFontSize="8.25" TextAuraName="alicemAura_$5_$6" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="13" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="0" TableVariableX="$5" TableVariableY="$6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="14" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="8ca68453-d64c-4307-b328-1998e8647911" TriggerText="MitiTable:$5" TriggerForce="active" ActionType="Trigger" Asynchronous="False">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="false" Name="Mitigation - Update Table [Keep Disabled]" Id="8ca68453-d64c-4307-b328-1998e8647911" RegularExpression="MitiTable:([\w]+)">
+        <Actions>
+          <Action OrderNumber="1" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="10" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][10]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="9" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][9]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="8" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][8]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="7" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][7]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="6" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][6]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="5" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][5]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="4" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][4]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="3" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][3]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="2" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][2]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="$1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${tvar:alicemInUse[$1][1]}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
