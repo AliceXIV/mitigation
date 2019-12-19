@@ -1111,13 +1111,13 @@
             <Actions>
               <Action OrderNumber="1" PlaySpeechMyself="True" UseTTSTextExpression="$1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki|Youko)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="2" PlaySoundFileExpression="${var:alicemPathName}$1.mp3" PlaySoundMyself="True" UseTTSTextExpression="Complex" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki|Youko)" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
                 <Conditions />
               </Action>
@@ -1128,13 +1128,13 @@
             <Actions>
               <Action OrderNumber="1" UseTTSTextExpression="$1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki|Youko)" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
                 </Condition>
                 <Conditions />
               </Action>
               <Action OrderNumber="2" PlaySoundFileExpression="${var:alicemPathName}$1.mp3" UseTTSTextExpression="Complex" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="PlaySound">
                 <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki)" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  <ConditionSingle Enabled="true" ExpressionL="$1" ExpressionTypeL="String" ExpressionR="(Alice|Busch|Kushiel|Miyuki|Emi|Complx|Syras|Specint|Aria|Bob|Charm|Hand|Kawaii|Khloe|Maguro|Maria|Mikomii|Naruchi|Shiroyuki|Temi|Verniy|Yuki|Youko)" ExpressionTypeR="String" ConditionType="RegexMatch" />
                 </Condition>
                 <Conditions />
               </Action>
