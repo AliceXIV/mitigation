@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="599ce491-a83c-4fcb-be14-ec9f13e6b949" Name="Mitigation v2" Enabled="true">
+  <ExportedFolder Id="599ce491-a83c-4fcb-be14-ec9f13e6b949" Name="AliceXIV Mitigation" Enabled="true">
     <Folders>
       <Folder Id="d3b06e02-afae-42f7-aed3-3f1486f24151" Name="Skills" Enabled="true">
         <Folders>
@@ -1033,13 +1033,13 @@
               <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="alicemPadX" VariableExpression="9" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="8" VariableOp="SetString" VariableName="alicemPath" VariableExpression="E:\Users\D9\Documents\stuff\Triggernometry\Mitigation\" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="8" VariableOp="SetString" VariableName="alicemPath" VariableExpression="https://alicexiv.github.io/mitigation/Images/" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="9" VariableOp="SetString" VariableName="alicemPathName" VariableExpression="E:\Users\D9\Documents\stuff\Triggernometry\Mitigation\Sounds\Names\Allison\Softer\" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="9" VariableOp="SetString" VariableName="alicemPathName" VariableExpression="https://alicexiv.github.io/mitigation/Sounds/Names/Allison/Softer/" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="10" VariableOp="SetString" VariableName="alicemPathSkill" VariableExpression="E:\Users\D9\Documents\stuff\Triggernometry\Mitigation\Sounds\" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
+              <Action OrderNumber="10" VariableOp="SetString" VariableName="alicemPathSkill" VariableExpression="https://alicexiv.github.io/mitigation/Sounds/" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="11" ListVariableName="alicemInUse" TableVariableOp="Set" TableVariableExpressionType="Numeric" TableVariableName="alicemInUse" TableVariableExpression="1" TableVariableX="1" TableVariableY="11" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="TableVariable" Asynchronous="False">
